@@ -7,3 +7,15 @@ function solution(A) {
 		}
 	} return result;
 }
+
+function solution(A) {
+    var result = 1;
+    var B = A.sort(function(a, b) {return a-b});
+
+    for (var i = 0; i < B.length; i++) {
+        if (B[i] == result) {
+            result = B[i]+1;
+        }
+    }
+    return result;
+}

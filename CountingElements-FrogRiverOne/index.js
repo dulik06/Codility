@@ -1,10 +1,13 @@
-function solution(A) {
-	A.sort(function(a,b) {return b-a});
-	var result = 1;
-		for (var i = 0; i < A.length; i++) {
-        if(A[i] == A[i+1] || A[0] !== A.length) {
-					return result = 0
-        }
+//time runout error
+
+function solution(X, A) {
+	var B = [];
+	var result = 0;
+	for (var i = 1; i <= X; i++) {
+		if(A.indexOf(i) == -1) {
+			return result = -1
 		}
-		return result;
+		B.push(A.indexOf(i))
+	}
+ 	return result = Math.max.apply(null, B);
 }
